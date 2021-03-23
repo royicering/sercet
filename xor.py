@@ -14,7 +14,7 @@ class Crypt:
             ciphertext[i] = chr(ord(msglist[i]) ^ ord(keylist[i % keylen]))
         return ''.join(ciphertext)
 
-    def dencrypt(self,msg):
+    def decrypt(self,msg):
         keylist = list(self.key)
         msglist = list(msg)
         keylen = len(keylist)
